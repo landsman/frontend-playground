@@ -6,7 +6,7 @@
     "postinstall": "npm run build",
     "build": "npm run sass && npm run autoprefixer && npm run images",
     "sass": "node-sass -r -x --output-style compressed ./front/sass/ -o ./public/dist/css/",
-    "watch": "onchange './front/sass/*' -- npm run build",
+    "watch": "onchange './front/sass/' -- npm run sass",
     "autoprefixer": "postcss -u autoprefixer --autoprefixer.browsers '&gt; 5%, ie 9' -r ./public/dist/css/*",
     "images": "imagemin-power -rvd ./front/ images/**/* --out-dir=public/dist/"
   },
