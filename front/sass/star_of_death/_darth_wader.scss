@@ -1,0 +1,11 @@
+@import "../variables";
+
+.vader {
+
+  &__breathing {
+    content: "whhhhHHHHHHHRRRR PPPPRRRrrrrrhhhhhhhhh";
+    display: block;
+    color: red;
+  }
+
+}

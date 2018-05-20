@@ -59,3 +59,11 @@ typings/
 
 # next.js build output
 .next
+
+# ide
+.idea
+
+# build
+public/dist/*
+!public/dist/.gitkeep
+package-lock.json
