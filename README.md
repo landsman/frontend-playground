@@ -1,5 +1,5 @@
 # Frontend Padawan
 
 - `npm install`
-- `npm build`
-- `npm watch`
+- `npm run build`
+- `npm run watch`
