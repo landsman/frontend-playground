@@ -15,7 +15,7 @@
     "imagemin-power-cli": "^3.0.0",
     "node-sass": "^4.9.0",
     "onchange": "^4.0.0",
-    "postcss-cli": "^5.0.0"
+    "postcss-cli": "^7.1.0"
   },
   "author": "Michal Landsman <landsman@studioart.cz> (https://studiaort.cz)",
   "license": "MIT"
