@@ -11,7 +11,7 @@
     "images": "imagemin-power -rvd ./front/ images/**/* --out-dir=public/dist/"
   },
   "devDependencies": {
-    "autoprefixer": "^8.5.0",
+    "autoprefixer": "^9.7.4",
     "imagemin-power-cli": "^3.0.0",
     "node-sass": "^4.9.0",
     "onchange": "^4.0.0",
