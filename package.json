@@ -14,7 +14,7 @@
     "autoprefixer": "^9.7.4",
     "imagemin-power-cli": "^3.0.0",
     "node-sass": "^4.9.0",
-    "onchange": "^6.1.0",
+    "onchange": "^7.0.2",
     "postcss-cli": "^7.1.0"
   },
   "author": "Michal Landsman <landsman@studioart.cz> (https://studiaort.cz)",
