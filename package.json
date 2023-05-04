@@ -13,9 +13,9 @@
   "devDependencies": {
     "autoprefixer": "^10.2.5",
     "imagemin-power-cli": "^3.0.0",
-    "node-sass": "^8.0.0",
     "onchange": "^7.1.0",
-    "postcss-cli": "^10.1.0"
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.62.1"
   },
   "author": "Michal Landsman <landsman@insuit.cz>",
   "license": "MIT"
