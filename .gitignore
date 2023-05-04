@@ -63,6 +63,10 @@ typings/
 # ide
 .idea
 
+# source code
+front/**/*.css
+
 # build
 public/dist/*
 !public/dist/.gitkeep
+!public/dist/**/.gitkeep
