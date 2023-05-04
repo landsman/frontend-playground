@@ -64,9 +64,9 @@ typings/
 .idea
 
 # source code
-front/**/*.css
+src/**/*.css
 
 # build
-public/dist/*
-!public/dist/.gitkeep
-!public/dist/**/.gitkeep
+build/*
+!build/.gitkeep
+!build/**/.gitkeep

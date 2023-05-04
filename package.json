@@ -1,22 +1,20 @@
 {
   "name": "frontend_padawan",
-  "version": "0.0.2",
-  "description": "Example frontend stack",
+  "version": "0.1.0",
+  "description": "Example frontend stack based on sass",
+  "author": "Michal Landsman <landsman@insuit.cz>",
+  "license": "MIT",
   "scripts": {
     "postinstall": "npm run build",
-    "build": "npm run sass && npm run autoprefixer && npm run images",
-    "sass": "node-sass -r -x --output-style compressed ./front/sass/ -o ./public/dist/css/",
-    "watch": "onchange './front/sass/' -- npm run sass",
-    "autoprefixer": "postcss -u autoprefixer --autoprefixer.browsers '&gt; 5%, ie 9' -r ./public/dist/css/*",
-    "images": "imagemin-power -rvd ./front/ images/**/* --out-dir=public/dist/",
+    "build:sass": "sh cli/sass.sh",
+    "build:images": "sh cli/images.sh",
+    "build": "sh cli/build.sh",
+    "watch": "sh cli/watch.sh"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.5",
-    "imagemin-power-cli": "^3.0.0",
+    "@nitra/minify-image": "^2.0.0",
     "onchange": "^7.1.0",
     "postcss-cli": "^10.1.0",
     "sass": "^1.62.1"
-  },
-  "author": "Michal Landsman <landsman@insuit.cz>",
-  "license": "MIT"
+  }
 }
