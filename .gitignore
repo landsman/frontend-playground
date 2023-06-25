@@ -63,7 +63,10 @@ typings/
 # ide
 .idea
 
+# source code
+src/**/*.css
+
 # build
-public/dist/*
-!public/dist/.gitkeep
-package-lock.json
+build/*
+!build/.gitkeep
+!build/**/.gitkeep
