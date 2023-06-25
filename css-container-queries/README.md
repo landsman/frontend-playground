@@ -1,4 +1,4 @@
-# Container Query
+# CSS Container Queries
 
 wip
 
