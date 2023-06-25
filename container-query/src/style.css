@@ -1,0 +1,10 @@
+.article {
+    container-type: inline-size;
+}
+
+@container (min-width: 500px) {
+    .card {
+        flex-direction: column;
+        font-size: max(1.2rem, 1em + 2cqi);
+    }
+}
