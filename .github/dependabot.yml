@@ -12,7 +12,7 @@ updates:
       include: 'scope'
 
   - package-ecosystem: 'npm'
-    directory: '/html-sass'
+    directory: '/html-css'
     schedule:
       interval: 'monthly'
     labels:
