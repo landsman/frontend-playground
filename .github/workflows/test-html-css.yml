@@ -21,6 +21,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: cd html-css
-      - run: npm install
-      - run: npm run build
+      - run: |
+          cd html-css
+          npm install
+          npm run build
