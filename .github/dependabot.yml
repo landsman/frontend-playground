@@ -1,0 +1,23 @@
+version: 2
+updates:
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'monthly'
+    labels:
+      - 'dependencies'
+      - 'github-actions'
+    commit-message:
+      prefix: 'ci'
+      include: 'scope'
+
+  - package-ecosystem: 'npm'
+    directory: '/html-sass'
+    schedule:
+      interval: 'monthly'
+    labels:
+      - 'dependencies'
+      - 'npm'
+    commit-message:
+      prefix: 'ci'
+      include: 'scope'
