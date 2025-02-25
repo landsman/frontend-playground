@@ -15,6 +15,6 @@
     "@nitra/minify-image": "^2.0.0",
     "onchange": "^7.1.0",
     "postcss-cli": "^10.1.0",
-    "sass": "^1.62.1"
+    "sass": "^1.85.1"
   }
 }
