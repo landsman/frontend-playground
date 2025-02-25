@@ -8,8 +8,8 @@ on:
       - synchronize
       - ready_for_review
     paths:
-      - ".github/workflows/test.yml"
-      - "html-sass/**"
+      - ".github/workflows/test-html-css.yml"
+      - "/html-css/**"
       - "!**.md"
   workflow_dispatch:
 
@@ -21,6 +21,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: cd html-sass
-      - run: npm install
-      - run: npm run build
+      - run: |
+          cd html-css
+          npm install
+          npm run build
