@@ -24,8 +24,14 @@ Each folder is an independent project.
 
 ## Video
 
+- [37signals](https://www.youtube.com/@37signals/videos)
 - [Fireship](https://www.youtube.com/@Fireship)
 - [Beyond Fireship](https://www.youtube.com/@beyondfireship)
 - [ThePrimeTimeagen](https://www.youtube.com/@ThePrimeTimeagen)
 - [Syntax](https://www.youtube.com/@syntaxfm)
-
+- [Jack Herrington](https://www.youtube.com/@jherr/videos)
+- [IBM Technology](https://www.youtube.com/@IBMTechnology/videos)
+- [Apple Developer](https://www.youtube.com/@AppleDeveloper)
+- [Changelog](https://www.youtube.com/@Changelog)
+- [Chrome for Developers](https://www.youtube.com/@ChromeDevs)
+- [Figma](https://www.youtube.com/@Figma)
