@@ -18,6 +18,7 @@ Each folder is an independent project.
 
 - [Sidebar](https://sidebar.io)
 - [Changelog News](https://changelog.com/news)
+- [React Status](https://react.statuscode.com)
 - [This Week In React](https://thisweekinreact.com)
 - [JavaScript Weekly](https://javascriptweekly.com)
 - [Bytes](https://bytes.dev)
