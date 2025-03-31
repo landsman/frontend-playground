@@ -36,3 +36,4 @@ Each folder is an independent project.
 - [Changelog](https://www.youtube.com/@Changelog)
 - [Chrome for Developers](https://www.youtube.com/@ChromeDevs)
 - [Figma](https://www.youtube.com/@Figma)
+- [Scale](https://www.youtube.com/@scaleconference/videos)
