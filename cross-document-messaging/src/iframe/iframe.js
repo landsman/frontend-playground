@@ -46,4 +46,7 @@ function initIframeMessaging() {
 // Initialize iframe messaging when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     initIframeMessaging();
+
+    /* hide scrollbars */
+    document.body.style.overflow = 'hidden';
 });
