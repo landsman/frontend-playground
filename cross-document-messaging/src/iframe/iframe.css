@@ -1,0 +1,37 @@
+body {
+    width: 100%;
+    min-height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+#content {
+    width: 100%;
+    max-width: 100%;
+    min-height: 400px;
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.padding {
+    padding: 20px;
+}
+
+h1 {
+    margin-top: 0;
+    color: #fff;
+}
+
+p {
+    font-size: 18px;
+    margin: 20px 0;
+}
