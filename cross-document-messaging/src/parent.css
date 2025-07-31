@@ -41,3 +41,17 @@ h1 {
     border-radius: 4px;
     overflow: hidden;
 }
+
+#dimensions {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+
+    padding: 10px 10px;
+
+    color: white;
+    font-size: 12px;
+
+    background: rgba(0, 0, 0, 0.7); /* transparent black */
+    border-radius: 8px;
+}

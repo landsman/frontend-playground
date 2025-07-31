@@ -19,18 +19,18 @@
                 <iframe id="iframe" src="http://127.0.0.1:8081/iframe/iframe.html" title="Message Iframe"></iframe>
             </div>
             <!-- /end of the external iframe -->
-
-            <!-- display values from the communication with iframe via javascript -->
-            <div class="dimensions">
-                <h3>Iframe Dimensions:</h3>
-                <div class="dimension-item">
-                    <span class="dimension-label">Height:</span>
-                    <span class="dimension-value" id="iframeHeight">-</span>
-                </div>
-            </div>
-            <!-- /end of values -->
         </div>
     </div>
+
+    <!-- display values from the communication with iframe via javascript -->
+    <div id="dimensions">
+        <strong>Iframe Dimensions:</strong>
+        <div class="dimension-item">
+            <span class="dimension-label">Height:</span>
+            <span class="dimension-value" id="iframeHeight">-</span>
+        </div>
+    </div>
+    <!-- /end of values -->
 
     <!-- listen to data what iframe sends us -->
     <script src="./parent.js?v=1"></script>
