@@ -13,9 +13,12 @@ This example shows a simple use-case:
 ## Project Structure
 
 ```
-/index.html       - The parent window containing the iframe
-/iframe.html      - The iframe content page
-/script.js        - JavaScript to handle messaging logic for both parent and iframe
+/src/parent/index.html         - The parent window containing the iframe
+/src/parent/parent-script.js   - JavaScript for parent window messaging logic
+/src/parent/index.style.css    - Styles for the parent window
+/src/iframe/iframe.html        - The iframe content page
+/src/iframe/iframe-script.js   - JavaScript for iframe messaging logic
+/src/iframe/iframe.style.css   - Styles for the iframe content
 ```
 
 ## How It Works
@@ -27,10 +30,48 @@ This example shows a simple use-case:
 
 ## Running the Example
 
-1. Serve the project files using a local web server (this is necessary for cross-origin messaging).
-2. Open `index.html` in your browser.
-3. The parent window will send a greeting message to the iframe.
-4. Check the browser console in both the parent and iframe to see the communication logs.
+### Running Locally on macOS
+
+1. **Start a local web server** (required for cross-origin messaging):
+   ```bash
+   cd cross-document-messaging
+   npm install
+   npm serve
+   ```
+
+2. **Open in your browser**: Navigate to `http://localhost:8081/index.html`
+
+3. **View the demo**: The iframe will automatically send its dimensions to the parent window.
+
+4. **Test responsiveness**: Try resizing the browser window to see the dimensions update in real-time.
+
+## Troubleshooting
+
+### Port Already in Use Error
+
+If you encounter an error like `EADDRINUSE: address already in use`, it means another process is using the port:
+
+1. **Find the process using the port**:
+   ```bash
+   lsof -i :8081
+   ```
+
+2. **Kill the process** (replace PID with the actual process ID):
+   ```bash
+   kill <PID>
+   ```
+
+3. **Or use a different port**:
+   ```bash
+   npm start -- -p 8082
+   ```
+
+### Alternative Server Options
+
+If you prefer using Python's built-in server:
+```bash
+python3 -m http.server 8081
+```
 
 ## Notes
 
