@@ -7,31 +7,33 @@
     <link rel="stylesheet" href="./parent.css?v=1">
 </head>
 <body>
+
     <div class="container">
-        <h1>🖼️ Parent Window - Iframe Dimensions</h1>
-        <p>This demo shows how an iframe can send its dimensions (width and height) to the parent window using the <code>postMessage</code> API.</p>
+        <div class="content">
+            <h1>🖼️ Parent Window - Iframe Dimensions</h1>
+            <p>This demo shows how an iframe can send its dimensions (width and height) to the parent window using the <code>postMessage</code> API.</p>
 
-        <!-- load external iframe -->
-        <div class="iframe-container">
-            <h3>Embedded Iframe:</h3>
-            <iframe id="iframe" src="http://127.0.0.1:8081/iframe/iframe.html" title="Message Iframe"></iframe>
-        </div>
-        <!-- /end of the external iframe -->
-
-        <!-- display values from the communication with iframe via javascript -->
-        <div class="dimensions">
-            <h3>Iframe Dimensions:</h3>
-            <div class="dimension-item">
-                <span class="dimension-label">Width:</span>
-                <span class="dimension-value" id="iframeWidth">-</span>
+            <!-- load external iframe -->
+            <div class="iframe-container">
+                <h3>Embedded Iframe:</h3>
+                <iframe id="iframe" src="http://127.0.0.1:8081/iframe/iframe.html" title="Message Iframe"></iframe>
             </div>
-            <div class="dimension-item">
-                <span class="dimension-label">Height:</span>
-                <span class="dimension-value" id="iframeHeight">-</span>
-            </div>
-        </div>
-        <!-- /end of values -->
+            <!-- /end of the external iframe -->
 
+            <!-- display values from the communication with iframe via javascript -->
+            <div class="dimensions">
+                <h3>Iframe Dimensions:</h3>
+                <div class="dimension-item">
+                    <span class="dimension-label">Width:</span>
+                    <span class="dimension-value" id="iframeWidth">-</span>
+                </div>
+                <div class="dimension-item">
+                    <span class="dimension-label">Height:</span>
+                    <span class="dimension-value" id="iframeHeight">-</span>
+                </div>
+            </div>
+            <!-- /end of values -->
+        </div>
     </div>
 
     <!-- listen to data what iframe sends us -->

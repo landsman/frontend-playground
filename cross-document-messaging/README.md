@@ -14,11 +14,11 @@ This example shows a simple use-case:
 
 ```
 /src/parent/index.html         - The parent window containing the iframe
-/src/parent/parent-script.js   - JavaScript for parent window messaging logic
-/src/parent/index.style.css    - Styles for the parent window
-/src/iframe/iframe.html        - The iframe content page
-/src/iframe/iframe-script.js   - JavaScript for iframe messaging logic
-/src/iframe/iframe.style.css   - Styles for the iframe content
+/src/parent/parent.js   - JavaScript for parent window messaging logic
+/src/parent/parent.css    - Styles for the parent window
+/src/iframe/index.html        - The iframe content page
+/src/iframe/iframe.js   - JavaScript for iframe messaging logic
+/src/iframe/iframe.css   - Styles for the iframe content
 ```
 
 ## How It Works
