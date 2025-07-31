@@ -7,26 +7,33 @@ This example project demonstrates how to use the standard **cross-document messa
 Modern web applications often embed content from different origins using iframes. To communicate safely between the iframe and its parent window, the [`window.postMessage()`](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) method is used. This allows messages to be sent and received securely across origins.
 
 This example shows a simple use-case:
-- The **parent window** sends a message to the iframe.
-- The **iframe** listens for messages from the parent, processes them, and can also send back responses.
+- The **iframe** automatically sends its dimensions to the parent window.
+- The **parent window** listens for messages from the iframe and updates the display accordingly.
 
 ## Project Structure
 
 ```
-/src/parent/index.html         - The parent window containing the iframe
-/src/parent/parent.js   - JavaScript for parent window messaging logic
-/src/parent/parent.css    - Styles for the parent window
-/src/iframe/index.html        - The iframe content page
-/src/iframe/iframe.js   - JavaScript for iframe messaging logic
-/src/iframe/iframe.css   - Styles for the iframe content
+cross-document-messaging/
+├── README.md                   # Project documentation
+├── package.json                # Node.js dependencies and scripts
+├── package-lock.json           # Dependency lock file
+└── src/
+    ├── index.html              # 🏠 Main parent window (entry point)
+    ├── parent.js               # 📤 Parent window messaging logic
+    ├── parent.css              # 🎨 Parent window styles
+    └── iframe/
+        ├── iframe.html         # 🖼️  Embedded iframe content
+        ├── iframe.js           # 📥 Iframe messaging logic
+        └── iframe.css          # 🎨 Iframe content styles
 ```
 
 ## How It Works
 
-1. The parent window accesses the iframe DOM element and sends a message using `iframe.contentWindow.postMessage()`.
-2. The iframe listens for the `message` event, validates the message origin, and processes the data.
-3. The iframe can optionally send a response message back to the parent using the same `postMessage` method.
-4. Both sides verify the origins of messages to ensure security.
+1. The iframe automatically calculates its content dimensions when loaded and on window resize.
+2. The iframe sends dimension data to the parent window using `window.parent.postMessage()`.
+3. The parent window listens for the `message` event, validates the message origin, and processes the dimension data.
+4. The parent window updates the iframe's height and displays the received dimensions.
+5. Both sides verify the origins of messages to ensure security.
 
 ## Running the Example
 
@@ -36,7 +43,7 @@ This example shows a simple use-case:
    ```bash
    cd cross-document-messaging
    npm install
-   npm serve
+   npm start
    ```
 
 2. **Open in your browser**: Navigate to `http://localhost:8081/index.html`
