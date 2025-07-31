@@ -11,11 +11,14 @@
         <h1>🖼️ Parent Window - Iframe Dimensions</h1>
         <p>This demo shows how an iframe can send its dimensions (width and height) to the parent window using the <code>postMessage</code> API.</p>
 
+        <!-- load external iframe -->
         <div class="iframe-container">
             <h3>Embedded Iframe:</h3>
-            <iframe id="messageIframe" src="../iframe/iframe.html" title="Message Iframe"></iframe>
+            <iframe id="iframe" src="http://127.0.0.1:8081/iframe/iframe.html" title="Message Iframe"></iframe>
         </div>
+        <!-- /end of the external iframe -->
 
+        <!-- display values from the communication with iframe via javascript -->
         <div class="dimensions">
             <h3>Iframe Dimensions:</h3>
             <div class="dimension-item">
@@ -27,9 +30,12 @@
                 <span class="dimension-value" id="iframeHeight">-</span>
             </div>
         </div>
+        <!-- /end of values -->
 
     </div>
 
+    <!-- listen to data what iframe sends us -->
     <script src="./parent.js?v=1"></script>
+
 </body>
 </html>

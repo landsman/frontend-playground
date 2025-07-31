@@ -4,7 +4,7 @@
   "description": "A demo project showing iframe-parent communication using postMessage API",
   "main": "src/parent/index.html",
   "scripts": {
-    "start": "http-server -p 8081"
+    "start": "http-server src -p 8081"
   },
   "author": "Michal Landsman",
   "license": "MIT",
