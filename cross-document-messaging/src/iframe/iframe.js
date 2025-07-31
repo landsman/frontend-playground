@@ -2,30 +2,15 @@
 // This script handles sending iframe dimensions to the parent window
 
 const plog = '🟢 [IFRAME]';
+let debounceTimer = null;
 
 console.log(`${plog} Iframe script loaded`);
 
 // Send dimensions to a parent window
 function sendDimensions() {
-    // Get the container element dimensions instead of window dimensions
-    const container = document.getElementById('content');
-    let width, height;
-    
-    if (container) {
-        const rect = container.getBoundingClientRect();
-        width = rect.width;
-        height = rect.height;
-    } else {
-        console.error(`${plog} Container element not found! Please check your HTML!`);
-        // Fallback to window dimensions if container not found
-        width = window.innerWidth;
-        height = window.innerHeight;
-    }
-    
     const message = {
         type: 'dimensions',
-        width: width,
-        height: height
+        height: window.document.body.scrollHeight + 50
     };
 
     try {
@@ -36,6 +21,17 @@ function sendDimensions() {
     }
 }
 
+// Debounced version of sendDimensions to prevent loops
+function sendDimensionsDebounced() {
+    if (debounceTimer) {
+        clearTimeout(debounceTimer);
+    }
+    debounceTimer = setTimeout(() => {
+        sendDimensions();
+        debounceTimer = null;
+    }, 100); // 100ms debounce delay
+}
+
 // Initialize iframe messaging
 function initIframeMessaging() {
     console.log(`${plog} Sending dimensions to parent...`);
@@ -43,8 +39,8 @@ function initIframeMessaging() {
     // Send dimensions immediately
     sendDimensions();
 
-    // Send dimensions when a window resizes
-    window.addEventListener('resize', sendDimensions);
+    // Send dimensions when a window resizes (debounced to prevent loops)
+    window.addEventListener('resize', sendDimensionsDebounced);
 }
 
 // Initialize iframe messaging when DOM is ready

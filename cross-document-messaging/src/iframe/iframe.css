@@ -1,16 +1,21 @@
 body {
-    font-family: Arial, sans-serif;
+    width: 100%;
+    min-height: 100%;
+
     margin: 0;
     padding: 0;
+
+    font-family: Arial, sans-serif;
+
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    min-height: calc(100vh - 40px);
 }
 
 #content {
+    width: 100%;
     max-width: 100%;
-    min-width: 600px;
     min-height: 400px;
+    box-sizing: border-box;
 
     background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;

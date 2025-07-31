@@ -20,7 +20,7 @@ function handleMessage(event) {
     const data = event.data;
     if (data.type === 'dimensions') {
         console.log('[PARENT] Received dimensions:', data);
-        updateDimensionsDisplay(data.width, data.height);
+        updateDimensionsDisplay(data.height);
     }
 }
 
@@ -36,15 +36,10 @@ function destroyParentMessaging() {
 }
 
 // Update the dimensions display in the DOM
-function updateDimensionsDisplay(width, height) {
+function updateDimensionsDisplay(height) {
     const iframe = document.getElementById('iframe');
-    const widthElement = document.getElementById('iframeWidth');
     const heightElement = document.getElementById('iframeHeight');
-    
-    if (widthElement) {
-        widthElement.textContent = width + 'px';
-        iframe.style.width = width + 'px';
-    }
+
     if (heightElement) {
         heightElement.textContent = height + 'px';
         iframe.style.height = height + 'px';
