@@ -1,0 +1,16 @@
+dialog {
+  opacity: 0;
+  scale: 0;
+  display: block;
+  transition: all 0.3s;
+  border-radius: 8px;
+}
+
+dialog[open] {
+  opacity: 1;
+  scale: 1;
+}
+
+dialog::backdrop {
+  background-color: rgb(0, 0, 255, 0.2);
+}

@@ -4,7 +4,7 @@ Another of the features that I used extensively from the available libraries lik
 
 ## Can I use?
 
-- [From what I read it's still experimental](https://caniuse.com/?search=Popover)
+- [From what I read, it's still experimental](https://caniuse.com/?search=Popover)
 
 ## Resources
 

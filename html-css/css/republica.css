@@ -1,17 +1,17 @@
 .chewbacca {
 
-    &.chewbacca__cry {
-        display: block;
-        content: "AAARARRRGWWWH";
-        color: blue;
-    }
+  &.chewbacca__cry {
+    display: block;
+    content: "AAARARRRGWWWH";
+    color: blue;
+  }
 
 }
 
 .falcon {
 
-    &.falcon__engine {
-        background: var(--color_republica);
-    }
+  &.falcon__engine {
+    background: var(--color_republica);
+  }
 
 }

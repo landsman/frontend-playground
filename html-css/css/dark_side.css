@@ -1,17 +1,17 @@
 .vader {
 
-    &.vader__breathing {
-        content: "whhhhHHHHHHHRRRR PPPPRRRrrrrrhhhhhhhhh";
-        display: block;
-        color: red;
-    }
+  &.vader__breathing {
+    content: "whhhhHHHHHHHRRRR PPPPRRRrrrrrhhhhhhhhh";
+    display: block;
+    color: red;
+  }
 
 }
 
 .star {
 
-    &.star__engine {
-        background: var(--color_dark_side);
-    }
+  &.star__engine {
+    background: var(--color_dark_side);
+  }
 
 }
