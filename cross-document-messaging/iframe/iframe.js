@@ -6,7 +6,13 @@ let debounceTimer = null;
 
 console.log(`${plog} Iframe script loaded`);
 
-// Send dimensions to a parent window
+/**
+ * Sends the dimensions of the document body, including a fixed additional height,
+ * to the parent window using the postMessage API. The message includes the type
+ * ('dimensions') and the calculated height.
+ *
+ * @return {void} Does not return any value.
+ */
 function sendDimensions() {
   const message = {
     type: 'dimensions',
@@ -21,7 +27,11 @@ function sendDimensions() {
   }
 }
 
-// Debounced version of sendDimensions to prevent loops
+/**
+ * Debounced version of sendDimensions to prevent loops.
+ *
+ * @return {void} This function does not return any value.
+ */
 function sendDimensionsDebounced() {
   if (debounceTimer) {
     clearTimeout(debounceTimer);
@@ -32,7 +42,12 @@ function sendDimensionsDebounced() {
   }, 100); // 100ms debounce delay
 }
 
-// Initialize iframe messaging
+/**
+ * Initializes messaging with the parent iframe by sending the current dimensions
+ * of the iframe and setting up a listener to send updated dimensions on resize events.
+ *
+ * @return {void} No return value.
+ */
 function initIframeMessaging() {
   console.log(`${plog} Sending dimensions to parent...`);
 
@@ -43,7 +58,9 @@ function initIframeMessaging() {
   window.addEventListener('resize', sendDimensionsDebounced);
 }
 
-// Initialize iframe messaging when DOM is ready
+/**
+ * Initialize iframe messaging when DOM is ready
+ */
 document.addEventListener('DOMContentLoaded', function () {
   initIframeMessaging();
 
