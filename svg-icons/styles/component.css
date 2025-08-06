@@ -1,0 +1,39 @@
+/* Component-related styles for SVG icons */
+
+/* Hover effects for icons */
+.hover-effect {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+@layer component {
+  .hover-effect:hover {
+    background-color: #e74c3c;
+    transform: scale(1.1);
+  }
+
+  /* Data attribute color overrides */
+  .icon[data-color="red"] {
+    background-color: #e74c3c;
+  }
+
+  .icon[data-color="gold"] {
+    background-color: #f1c40f;
+  }
+
+  .icon[data-color="green"] {
+    background-color: #27ae60;
+  }
+
+  .icon[data-color="danger"] {
+    background-color: #e74c3c;
+  }
+
+  .icon[data-color="warning"] {
+    background-color: #f39c12;
+  }
+
+  .icon[data-color="info"] {
+    background-color: #3498db;
+  }
+}

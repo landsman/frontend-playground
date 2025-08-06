@@ -7,7 +7,7 @@ A comprehensive demo project showcasing how to work with SVG icons using CSS mas
 - **20 High-Quality SVG Icons**: Carefully crafted icons including gear, pencil, search, trash, folder, home, user, heart, star, download, upload, mail, phone, calendar, lock, unlock, arrows, plus, minus, and check
 - **CSS Mask Technique**: Uses CSS `mask-image` for optimal performance and flexibility
 - **Color Customization**: Easy color overrides using CSS custom properties and data attributes
-- **Hover Effects**: Smooth transitions and interactive hover states
+- **Built-in Hover Effects**: All icons have default hover effects with smooth transitions and interactive states
 - **Responsive Design**: Mobile-friendly grid layout
 - **Framework Agnostic**: Works with React, Vue, Angular, or vanilla HTML/CSS
 - **No Build Step Required**: Direct browser compatibility
@@ -27,40 +27,49 @@ A comprehensive demo project showcasing how to work with SVG icons using CSS mas
 
 ### Basic Icon Usage
 
+All icons have built-in hover effects by default:
+
 ```html
-<div class="icon gear"></div>
-<div class="icon search"></div>
-<div class="icon heart"></div>
+<div class="icon icon-gear"></div>
+<div class="icon icon-search"></div>
+<div class="icon icon-heart"></div>
 ```
 
 ### Color Customization with Data Attributes
 
 ```html
 <!-- Predefined color themes -->
-<div class="icon heart" data-color="red"></div>
-<div class="icon star" data-color="gold"></div>
-<div class="icon check" data-color="green"></div>
-<div class="icon trash" data-color="danger"></div>
-<div class="icon lock" data-color="warning"></div>
-<div class="icon mail" data-color="info"></div>
+<div class="icon icon-heart" data-color="red"></div>
+<div class="icon icon-star" data-color="gold"></div>
+<div class="icon icon-check" data-color="green"></div>
+<div class="icon icon-trash" data-color="danger"></div>
+<div class="icon icon-lock" data-color="warning"></div>
+<div class="icon icon-mail" data-color="info"></div>
 ```
 
 ### Hover Effects
 
+All icons have default hover effects (color change to `--icon-color-hover` and subtle scale). For enhanced hover effects with red color and larger scale, use the `.hover-effect` class:
+
 ```html
-<div class="icon gear hover-effect"></div>
-<div class="icon heart hover-effect"></div>
+<!-- Default hover (built-in) -->
+<div class="icon icon-gear"></div>
+
+<!-- Enhanced hover effect -->
+<div class="icon icon-heart hover-effect"></div>
 ```
 
 ### Custom Colors with CSS
 
 ```css
-.icon.custom-color {
-  background-color: #9b59b6 !important;
-}
+@layer component {
+  .icon.custom-color {
+    background-color: #9b59b6;
+  }
 
-.icon.gradient {
-  background: linear-gradient(45deg, #3498db, #e74c3c) !important;
+  .icon.gradient {
+    background: linear-gradient(45deg, #3498db, #e74c3c);
+  }
 }
 ```
 
@@ -68,27 +77,27 @@ A comprehensive demo project showcasing how to work with SVG icons using CSS mas
 
 | Icon Name | Class | Description |
 |-----------|-------|-------------|
-| Gear | `.gear` | Settings/configuration |
-| Pencil | `.pencil` | Edit/write |
-| Search | `.search` | Search functionality |
-| Trash | `.trash` | Delete/remove |
-| Folder | `.folder` | File management |
-| Home | `.home` | Home/dashboard |
-| User | `.user` | User profile |
-| Heart | `.heart` | Favorites/like |
-| Star | `.star` | Rating/bookmark |
-| Download | `.download` | Download action |
-| Upload | `.upload` | Upload action |
-| Mail | `.mail` | Email/messages |
-| Phone | `.phone` | Contact/call |
-| Calendar | `.calendar` | Date/schedule |
-| Lock | `.lock` | Security/locked |
-| Unlock | `.unlock` | Security/unlocked |
-| Arrow Left | `.arrow-left` | Navigation |
-| Arrow Right | `.arrow-right` | Navigation |
-| Plus | `.plus` | Add/create |
-| Minus | `.minus` | Remove/subtract |
-| Check | `.check` | Success/complete |
+| Gear | `.icon-gear` | Settings/configuration |
+| Pencil | `.icon-pencil` | Edit/write |
+| Search | `.icon-search` | Search functionality |
+| Trash | `.icon-trash` | Delete/remove |
+| Folder | `.icon-folder` | File management |
+| Home | `.icon-home` | Home/dashboard |
+| User | `.icon-user` | User profile |
+| Heart | `.icon-heart` | Favorites/like |
+| Star | `.icon-star` | Rating/bookmark |
+| Download | `.icon-download` | Download action |
+| Upload | `.icon-upload` | Upload action |
+| Mail | `.icon-mail` | Email/messages |
+| Phone | `.icon-phone` | Contact/call |
+| Calendar | `.icon-calendar` | Date/schedule |
+| Lock | `.icon-lock` | Security/locked |
+| Unlock | `.icon-unlock` | Security/unlocked |
+| Arrow Left | `.icon-arrow-left` | Navigation |
+| Arrow Right | `.icon-arrow-right` | Navigation |
+| Plus | `.icon-plus` | Add/create |
+| Minus | `.icon-minus` | Remove/subtract |
+| Check | `.icon-check` | Success/complete |
 
 ## Color Themes
 
@@ -109,10 +118,10 @@ The theme uses CSS custom properties for easy customization:
 
 ```css
 :root {
-  --text-icon-l: 2rem;          /* Desktop icon size */
-  --text-icon-xl: 3rem;         /* Mobile icon size */
-  --color-icon-default: #007bff; /* Default icon color */
-  --color-icon-subtle: #646cff;  /* Subtle icon color */
+    --icon-size-l: 2rem; /* Desktop icon size */
+    --icon-size-xl: 3rem; /* Mobile icon size */
+    --icon-color: #007bff; /* Default icon color */
+    --icon-color-hover: #646cff; /* Default hover color */
 }
 ```
 
@@ -122,13 +131,12 @@ The theme uses CSS custom properties for easy customization:
 2. Add a new CSS class in `icon.css`:
 
 ```css
-.my-icon {
-  composes: common;
-  mask-image: url("/img/my-icon.svg");
+.icon-my-icon {
+  mask-image: url("../img/my-icon.svg");
 }
 ```
 
-3. Use in HTML: `<div class="icon my-icon"></div>`
+3. Use in HTML: `<div class="icon icon-my-icon"></div>`
 
 ## Browser Support
 

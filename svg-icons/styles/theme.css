@@ -1,7 +1,7 @@
 /* css variables */
 :root {
-  --text-icon-l: 2rem;
-  --text-icon-xl: 3rem;
-  --color-icon-default: #007bff;
-  --color-icon-subtle: #646cff;
+  --icon-size-l: 2rem;
+  --icon-size-xl: 3rem;
+  --icon-color: #2ecc71;
+  --icon-color-hover: #000;
 }

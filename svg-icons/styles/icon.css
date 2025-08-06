@@ -1,131 +1,121 @@
 @layer theme {
-  .common {
-
+  /* Base styles for all icons */
+  .icon {
     /* regular size on desktop */
-    width: var(--text-icon-l);
-    height: var(--text-icon-l);
+    width: var(--icon-size-l);
+    height: var(--icon-size-l);
 
     display: block;
 
     /* default icon color - all icons should be in this color by default in SVG source code */
-    background-color: var(--color-icon-default);
+    background-color: var(--icon-color);
 
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
+
+    /* default hover effects for all icons */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+  }
+
+  .icon:hover {
+    background-color: var(--icon-color-hover);
   }
 
   /* smaller icon size for mobile devices */
   @media (max-width: 768px) {
-    .common {
-      width: var(--text-icon-xl);
-      height: var(--text-icon-xl);
+    .icon {
+      width: var(--icon-size-xl);
+      height: var(--icon-size-xl);
     }
   }
 
-  .gear {
-    composes: common;
+  .icon-gear {
     mask-image: url("../img/gear.svg");
   }
 
-  .pencil {
-    composes: common;
+  .icon-pencil {
     mask-image: url("../img/pencil.svg");
   }
 
-  .search {
-    composes: common;
+  .icon-search {
     mask-image: url("../img/search.svg");
   }
 
-  .trash {
-    composes: common;
+  .icon-trash {
     mask-image: url("../img/trash.svg");
   }
 
-  .folder {
-    composes: common;
+  .icon-folder {
     mask-image: url("../img/folder.svg");
-    background-color: var(--color-icon-subtle);
   }
 
-  .home {
-    composes: common;
+  .icon-home {
     mask-image: url("../img/home.svg");
   }
 
-  .user {
-    composes: common;
+  .icon-user {
     mask-image: url("../img/user.svg");
   }
 
-  .heart {
-    composes: common;
+  .icon-heart {
     mask-image: url("../img/heart.svg");
   }
 
-  .star {
-    composes: common;
+  .icon-star {
     mask-image: url("../img/star.svg");
   }
 
-  .download {
-    composes: common;
+  .icon-download {
     mask-image: url("../img/download.svg");
   }
 
-  .upload {
-    composes: common;
+  .icon-upload {
     mask-image: url("../img/upload.svg");
   }
 
-  .mail {
-    composes: common;
+  .icon-mail {
     mask-image: url("../img/mail.svg");
   }
 
-  .phone {
-    composes: common;
+  .icon-phone {
     mask-image: url("../img/phone.svg");
   }
 
-  .calendar {
-    composes: common;
+  .icon-calendar {
     mask-image: url("../img/calendar.svg");
   }
 
-  .lock {
-    composes: common;
+  .icon-lock {
     mask-image: url("../img/lock.svg");
   }
 
-  .unlock {
-    composes: common;
+  .icon-unlock {
     mask-image: url("../img/unlock.svg");
   }
 
-  .arrow-left {
-    composes: common;
+  .icon-arrow-left {
     mask-image: url("../img/arrow-left.svg");
   }
 
-  .arrow-right {
-    composes: common;
+  .icon-arrow-right {
     mask-image: url("../img/arrow-right.svg");
   }
 
-  .plus {
-    composes: common;
+  .icon-plus {
     mask-image: url("../img/plus.svg");
   }
 
-  .minus {
-    composes: common;
+  .icon-minus {
     mask-image: url("../img/minus.svg");
   }
 
-  .check {
-    composes: common;
+  .icon-check {
     mask-image: url("../img/check.svg");
+  }
+
+  .icon-copy {
+    mask-image: url("../img/copy.svg");
   }
 }
