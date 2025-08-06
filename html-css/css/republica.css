@@ -1,17 +1,89 @@
-.chewbacca {
-
-  &.chewbacca__cry {
-    display: block;
-    content: "AAARARRRGWWWH";
-    color: blue;
-  }
-
+/* Republic Era Styling */
+.republic {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%);
+  border-color: rgba(59, 130, 246, 0.3);
 }
 
-.falcon {
+.republic .section-title {
+  color: var(--color-republic);
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
 
-  &.falcon__engine {
-    background: var(--color_republica);
-  }
+.republic .section-title::after {
+  background: linear-gradient(90deg, transparent, var(--color-republic), transparent);
+}
 
+/* Luke Skywalker Card */
+.luke {
+  position: relative;
+}
+
+.luke::after {
+  content: '⭐';
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.luke:hover::after {
+  opacity: 1;
+  animation: twinkle 2s infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+/* Yoda Card */
+.yoda {
+  position: relative;
+}
+
+.yoda::after {
+  content: '🌟';
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.yoda:hover::after {
+  opacity: 1;
+  animation: wisdom 3s infinite;
+}
+
+@keyframes wisdom {
+  0%, 100% { opacity: 1; transform: rotate(0deg); }
+  25% { opacity: 0.7; transform: rotate(5deg); }
+  75% { opacity: 0.7; transform: rotate(-5deg); }
+}
+
+/* Chewbacca Sound Effects */
+.chewbacca-sound {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.chewbacca-sound .sound-trigger {
+  border-color: var(--color-jedi);
+  color: var(--color-jedi);
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.chewbacca-sound .sound-trigger:hover {
+  background: rgba(16, 185, 129, 0.2);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.republic .character-card:hover {
+  box-shadow: var(--shadow-lg), 0 0 20px rgba(59, 130, 246, 0.3);
 }

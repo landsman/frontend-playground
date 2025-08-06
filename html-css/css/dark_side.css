@@ -1,17 +1,156 @@
-.vader {
-
-  &.vader__breathing {
-    content: "whhhhHHHHHHHRRRR PPPPRRRrrrrrhhhhhhhhh";
-    display: block;
-    color: red;
-  }
-
+/* Dark Side Styling */
+.dark-side {
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.15) 0%, rgba(0, 0, 0, 0.3) 100%);
+  border-color: rgba(220, 38, 38, 0.4);
+  position: relative;
 }
 
-.star {
+.dark-side::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(220, 38, 38, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+  border-radius: var(--radius-lg);
+}
 
-  &.star__engine {
-    background: var(--color_dark_side);
+.dark-side .section-title {
+  color: var(--color-dark-side);
+  text-shadow: 0 0 15px rgba(220, 38, 38, 0.7);
+}
+
+.dark-side .section-title::after {
+  background: linear-gradient(90deg, transparent, var(--color-dark-side), transparent);
+}
+
+/* Vader Card */
+.vader {
+  position: relative;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(220, 38, 38, 0.1) 100%);
+}
+
+.vader::after {
+  content: '⚔️';
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.vader:hover::after {
+  opacity: 1;
+  animation: menacing 2s infinite;
+}
+
+@keyframes menacing {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    filter: drop-shadow(0 0 5px rgba(220, 38, 38, 0.8));
   }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 0 10px rgba(220, 38, 38, 1));
+  }
+}
 
+/* Maul Card */
+.maul {
+  position: relative;
+  background: linear-gradient(135deg, rgba(139, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.maul::after {
+  content: '🔥';
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.maul:hover::after {
+  opacity: 1;
+  animation: rage 1.5s infinite;
+}
+
+@keyframes rage {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: hue-rotate(0deg);
+  }
+  25% {
+    opacity: 0.8;
+    transform: scale(1.2);
+    filter: hue-rotate(30deg);
+  }
+  75% {
+    opacity: 0.9;
+    transform: scale(0.9);
+    filter: hue-rotate(-30deg);
+  }
+}
+
+/* Vader Breathing Effects */
+.vader-breathing {
+  background: rgba(220, 38, 38, 0.1);
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+  position: relative;
+}
+
+.vader-breathing::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(220, 38, 38, 0.05) 50%, transparent 70%);
+  animation: breathingGlow 3s ease-in-out infinite;
+  border-radius: var(--radius-md);
+}
+
+@keyframes breathingGlow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+.vader-breathing .breathing-trigger {
+  border-color: var(--color-dark-side);
+  color: var(--color-dark-side);
+  background: rgba(220, 38, 38, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.vader-breathing .breathing-trigger:hover {
+  background: rgba(220, 38, 38, 0.2);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+}
+
+.dark-side .character-card:hover {
+  box-shadow: var(--shadow-lg), 0 0 25px rgba(220, 38, 38, 0.4);
+  border-color: var(--color-dark-side);
+}
+
+/* Dark Side specific image effects */
+.dark-side .character-image img {
+  filter: contrast(1.1) brightness(0.9);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.dark-side .character-card:hover .character-image img {
+  filter: contrast(1.2) brightness(1) drop-shadow(0 0 10px rgba(220, 38, 38, 0.5));
+  transform: scale(1.05);
 }
