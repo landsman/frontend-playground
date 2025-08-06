@@ -8,6 +8,7 @@ A comprehensive demo project showcasing how to work with SVG icons using CSS mas
 - **CSS Mask Technique**: Uses CSS `mask-image` for optimal performance and flexibility
 - **Color Customization**: Easy color overrides using CSS custom properties and data attributes
 - **Built-in Hover Effects**: All icons have default hover effects with smooth transitions and interactive states
+- **Enhanced Data Attribute Hover Effects**: Icons with data attributes feature unique rotate and scale animations on hover
 - **Responsive Design**: Mobile-friendly grid layout
 - **Framework Agnostic**: Works with React, Vue, Angular, or vanilla HTML/CSS
 - **No Build Step Required**: Direct browser compatibility
@@ -37,14 +38,16 @@ All icons have built-in hover effects by default:
 
 ### Color Customization with Data Attributes
 
+Icons with data attributes have custom colors and unique hover effects with rotate and scale animations:
+
 ```html
-<!-- Predefined color themes -->
-<div class="icon icon-heart" data-color="red"></div>
-<div class="icon icon-star" data-color="gold"></div>
-<div class="icon icon-check" data-color="green"></div>
-<div class="icon icon-trash" data-color="danger"></div>
-<div class="icon icon-lock" data-color="warning"></div>
-<div class="icon icon-mail" data-color="info"></div>
+<!-- Predefined color themes with hover effects -->
+<div class="icon icon-heart" data-color="red"></div>      <!-- Rotates 15° and scales 1.2x on hover -->
+<div class="icon icon-star" data-color="gold"></div>      <!-- Rotates -10° and scales 1.15x on hover -->
+<div class="icon icon-check" data-color="green"></div>    <!-- Rotates 20° and scales 1.3x on hover -->
+<div class="icon icon-trash" data-color="danger"></div>   <!-- Rotates -15° and scales 1.25x on hover -->
+<div class="icon icon-lock" data-color="warning"></div>   <!-- Rotates 12° and scales 1.2x on hover -->
+<div class="icon icon-mail" data-color="info"></div>      <!-- Rotates -8° and scales 1.18x on hover -->
 ```
 
 

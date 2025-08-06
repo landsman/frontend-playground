@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SVG Icons Demo</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css?v=1">
 </head>
 <body>
     <div class="container">
@@ -107,6 +107,7 @@
 
             <section class="demo-section">
                 <h2>Color Customization with Data Attributes</h2>
+                <p>Icons with data attributes have custom colors and unique hover effects with rotate and scale animations:</p>
                 <div class="icon-grid">
                     <div class="icon-item">
                         <div class="icon icon-heart" data-color="red"></div>
@@ -151,7 +152,7 @@
                 </div>
                 <div class="code-block">
                     <div class="code-header">
-                        <h3>With Color Override</h3>
+                        <h3>With Color Override & Hover Effects</h3>
                         <button class="copy-btn" onclick="copyToClipboard(this)" title="Copy to clipboard">
                             <div class="icon icon-copy"></div>
                         </button>
@@ -189,14 +190,7 @@ function copyToClipboard(button) {
 
 
 function showCopyFeedback(button, message) {
-    const originalTitle = button.title;
-    button.title = message;
-    button.classList.add('copied');
-
-    setTimeout(() => {
-        button.title = originalTitle;
-        button.classList.remove('copied');
-    }, 2000);
+    alert(message);
 }
 </script>
 </body>
