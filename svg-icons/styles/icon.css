@@ -1,0 +1,51 @@
+@layer theme {
+  .common {
+
+    /* regular size on desktop */
+    width: var(--text-icon-l);
+    height: var(--text-icon-l);
+
+    display: block;
+
+    /* default icon color - all icons should be in this color by default in SVG source code */
+    background-color: var(--color-icon-default);
+
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+  }
+
+  /* smaller icon size for mobile devices */
+  @media (max-width: 768px) {
+    .common {
+      width: var(--text-icon-xl);
+      height: var(--text-icon-xl);
+    }
+  }
+
+  .gear {
+    composes: common;
+    mask-image: url("/img/gear.svg");
+  }
+
+  .pencil {
+    composes: common;
+    mask-image: url("/img/pencil.svg");
+  }
+
+  .search {
+    composes: common;
+    mask-image: url("/img/search.svg");
+  }
+
+  .trash {
+    composes: common;
+    mask-image: url("/img/trash.svg");
+  }
+
+  .folder {
+    composes: common;
+    mask-image: url("/img/folder.svg");
+    background-color: var(--color-icon-subtle);
+  }
+}

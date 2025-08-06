@@ -1,0 +1,7 @@
+/* css variables */
+:root {
+  --text-icon-l: 2rem;
+  --text-icon-xl: 3rem;
+  --color-icon-default: #007bff;
+  --color-icon-subtle: #646cff;
+}
