@@ -64,6 +64,10 @@ p {
   text-align: center;
   padding: var(--spacing-2xl) 0;
   position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .crawl-text {
@@ -310,6 +314,10 @@ button:active,
 
   .intro {
     padding: var(--spacing-lg) 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .story-section {
