@@ -1,35 +1,84 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Space</title>
-  <link href="./css/style.css?v=1754486304" rel="stylesheet"/>
+  <meta charset="UTF-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link href="./css/style.css" rel="stylesheet" id="main-stylesheet" />
+  <title>Star Wars: A CSS Journey</title>
 </head>
 <body>
-<div id="app">
-  <div>
-    <h1>A long time ago in a galaxy far, far away....</h1>
+<main id="app">
+  <header class="intro">
+    <h1 class="crawl-text">A long time ago in a galaxy far, far away....</h1>
+  </header>
 
-    <h2>Republica</h2>
+  <section class="story-section republic">
+    <h2 class="section-title">The Republic Era</h2>
 
-    <div class="chewbacca">
+    <div class="character-grid">
+      <article class="character-card luke">
+        <div class="character-image">
+          <img alt="Young Luke Skywalker, a farm boy from Tatooine" src="./img/luke.png"/>
+        </div>
+        <div class="character-info">
+          <h3>Luke Skywalker</h3>
+          <p>A young farm boy destined for greatness</p>
+        </div>
+      </article>
+
+      <article class="character-card yoda">
+        <div class="character-image">
+          <img alt="Master Yoda, wise Jedi Master" src="./img/yoda.png"/>
+        </div>
+        <div class="character-info">
+          <h3>Master Yoda</h3>
+          <p>Wise and powerful Jedi Master</p>
+        </div>
+      </article>
     </div>
 
-    <div class="falcon">
-      <img alt="young Luke" src="./img/luke.png"/>
+    <div class="chewbacca-sound">
+      <input type="checkbox" id="chewbacca-toggle" class="sound-toggle">
+      <label for="chewbacca-toggle" class="sound-trigger" aria-label="Play Chewbacca sound">
+        🎵 Chewbacca says...
+      </label>
+      <div class="sound-text" aria-live="polite">AAARARRRGWWWH!</div>
     </div>
+  </section>
 
-    <div class="yoda">
-      <img alt="master of jedi Yoda" src="./img/yoda.png"/>
+  <section class="story-section dark-side">
+    <h2 class="section-title">The Dark Side Rises</h2>
+
+    <div class="character-grid">
+      <article class="character-card vader">
+        <div class="character-image">
+          <img alt="Darth Vader, Dark Lord of the Sith" src="./img/vader.png">
+        </div>
+        <div class="character-info">
+          <h3>Darth Vader</h3>
+          <p>Once a hero, now consumed by darkness</p>
+        </div>
+        <div class="vader-breathing">
+          <input type="checkbox" id="vader-toggle" class="breathing-toggle">
+          <label for="vader-toggle" class="breathing-trigger" aria-label="Play Vader breathing sound">
+            🫁 Breathing...
+          </label>
+          <div class="breathing-text" aria-live="polite">whhhhHHHHHHHRRRR PPPPRRRrrrrrhhhhhhhhh</div>
+        </div>
+      </article>
+
+      <article class="character-card maul">
+        <div class="character-image">
+          <img alt="Darth Maul, Sith apprentice" src="./img/maul.png"/>
+        </div>
+        <div class="character-info">
+          <h3>Darth Maul</h3>
+          <p>Fierce Sith warrior with double-bladed lightsaber</p>
+        </div>
+      </article>
     </div>
+  </section>
+</main>
 
-    <h2>After years ...</h2>
-
-    <div class="vader">
-      <img alt="Darth Vader" src="./img/vader.png">
-    </div>
-  </div>
-</div>
 </body>
 </html>
