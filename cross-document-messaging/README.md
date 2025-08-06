@@ -21,8 +21,7 @@ This example shows a simple use-case:
 ```
 cross-document-messaging/
 ├── README.md                   # Project documentation
-├── package.json                # Node.js dependencies and scripts
-├── package-lock.json           # Dependency lock file
+├── package.json                # Project metadata
 └── src/
     ├── index.html              # 🏠 Main parent window (entry point)
     ├── parent.js               # 📤 Parent window messaging logic
@@ -45,14 +44,13 @@ cross-document-messaging/
 
 ### Running Locally on macOS
 
-1. **Start a local web server** (required for cross-origin messaging):
+1. **Start the root server** (required for cross-origin messaging):
    ```bash
-   cd cross-document-messaging
-   npm install
+   # From the project root directory (go up)
    npm start
    ```
 
-2. **Open in your browser**: Navigate to `http://localhost:8081/index.html`
+2. **Open in your browser**: Navigate to `http://localhost:8080/cross-document-messaging/src/`
 
 3. **View the demo**: The iframe will automatically send its dimensions to the parent window.
 
@@ -62,11 +60,11 @@ cross-document-messaging/
 
 ### Port Already in Use Error
 
-If you encounter an error like `EADDRINUSE: address already in use`, it means another process is using the port:
+If you encounter an error like `EADDRINUSE: address already in use`, it means another process is using port 8080:
 
 1. **Find the process using the port**:
    ```bash
-   lsof -i :8081
+   lsof -i :8080
    ```
 
 2. **Kill the process** (replace PID with the actual process ID):
@@ -74,17 +72,12 @@ If you encounter an error like `EADDRINUSE: address already in use`, it means an
    kill <PID>
    ```
 
-3. **Or use a different port**:
-   ```bash
-   npm start -- -p 8082
-   ```
-
 ### Alternative Server Options
 
-If you prefer using Python's built-in server:
+If you prefer using Python's built-in server from the project root:
 
 ```bash
-python3 -m http.server 8081
+python3 -m http.server 8080
 ```
 
 ## Notes

@@ -1,7 +1,11 @@
 // Parent Window Script - Iframe Dimensions Messaging
 // This script handles receiving iframe dimensions in the parent window
 
-const ALLOWED_ORIGIN = ['http://127.0.0.1:8081'];
+const ALLOWED_ORIGIN = [
+  'http://127.0.0.1:8080',
+  'http://localhost:8080'
+];
+
 console.log('[PARENT] Parent script loaded');
 
 // 1. Store your handler in a variable
