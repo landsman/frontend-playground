@@ -3,7 +3,8 @@
 
 const ALLOWED_ORIGIN = [
   'http://127.0.0.1:8080',
-  'http://localhost:8080'
+  'http://localhost:8080',
+  'https://landsman.github.io',
 ];
 
 console.log('[PARENT] Parent script loaded');
