@@ -1,16 +1,6 @@
 /* Component-related styles for SVG icons */
 
-/* Hover effects for icons */
-.hover-effect {
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  cursor: pointer;
-}
-
 @layer component {
-  .hover-effect:hover {
-    background-color: #e74c3c;
-    transform: scale(1.1);
-  }
 
   /* Data attribute color overrides */
   .icon[data-color="red"] {

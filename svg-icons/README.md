@@ -47,17 +47,6 @@ All icons have built-in hover effects by default:
 <div class="icon icon-mail" data-color="info"></div>
 ```
 
-### Hover Effects
-
-All icons have default hover effects (color change to `--icon-color-hover` and subtle scale). For enhanced hover effects with red color and larger scale, use the `.hover-effect` class:
-
-```html
-<!-- Default hover (built-in) -->
-<div class="icon icon-gear"></div>
-
-<!-- Enhanced hover effect -->
-<div class="icon icon-heart hover-effect"></div>
-```
 
 ### Custom Colors with CSS
 
