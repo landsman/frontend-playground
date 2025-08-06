@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="./style.css" rel="stylesheet"/>
+  <title>Container Query demo</title>
+</head>
+<body>
+<div id="content">
+  <div class="instructions">
+    <h3>🎯 CSS Container Queries Demo</h3>
+    <p><strong>Try this:</strong> Drag the right edge of the container below to resize it and watch how the card
+      changes!</p>
+    <p>The card will change colors, layout, and size based on the container's width, not the viewport width.</p>
+  </div>
+
+  <div class="article">
+    <h1>Resizable Container</h1>
+    <p>This container uses CSS Container Queries to adapt its content based on its own size. Resize me by dragging the
+      dashed border!</p>
+
+    <div class="card">
+      <h2>Responsive Card</h2>
+      <p>I change my appearance based on my container's width, not the browser window!</p>
+    </div>
+
+    <div class="cq-units">
+      <h4>Container Query Units Used:</h4>
+      <ul>
+        <li><code>cqi</code> - 1% of the container's inline size (width in horizontal writing mode)</li>
+        <li><code>cqw</code> - 1% of the container's width</li>
+        <li><code>cqh</code> - 1% of the container's height</li>
+        <li><code>cqb</code> - 1% of the container's block size (height in horizontal writing mode)</li>
+        <li><code>cqmin</code> - smaller value of cqi or cqb</li>
+        <li><code>cqmax</code> - larger value of cqi or cqb</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>

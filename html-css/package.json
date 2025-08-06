@@ -2,14 +2,10 @@
   "name": "html-css",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "start": "http-server . -p 8082"
   },
   "devDependencies": {
-    "typescript": "~5.9.2",
-    "vite": "^7.0.6"
+    "http-server": "^14.1.1"
   }
 }

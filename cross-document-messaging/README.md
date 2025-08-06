@@ -1,12 +1,18 @@
 # Iframe-Parent Communication Example
 
-This example project demonstrates how to use the standard **cross-document messaging** technique via the [`postMessage` API](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) to enable secure communication between a parent window and an embedded iframe.
+This example project demonstrates how to use the standard **cross-document messaging** technique via the [
+`postMessage` API](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) to enable secure communication
+between a parent window and an embedded iframe.
 
 ## Overview
 
-Modern web applications often embed content from different origins using iframes. To communicate safely between the iframe and its parent window, the [`window.postMessage()`](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) method is used. This allows messages to be sent and received securely across origins.
+Modern web applications often embed content from different origins using iframes. To communicate safely between the
+iframe and its parent window, the [
+`window.postMessage()`](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) method is used. This allows
+messages to be sent and received securely across origins.
 
 This example shows a simple use-case:
+
 - The **iframe** automatically sends its dimensions to the parent window.
 - The **parent window** listens for messages from the iframe and updates the display accordingly.
 
@@ -76,6 +82,7 @@ If you encounter an error like `EADDRINUSE: address already in use`, it means an
 ### Alternative Server Options
 
 If you prefer using Python's built-in server:
+
 ```bash
 python3 -m http.server 8081
 ```

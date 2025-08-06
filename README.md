@@ -1,9 +1,20 @@
 # Frontend Playground
 
-a place where I try out features or tools related to web development.
-It is also a good place where I can redirect someone who going to start with it.
+A monorepo containing various frontend playground projects where I try out features or tools related to web development.
+It is also a good place where I can redirect someone who is going to start with it.
 
-Each folder is an independent project.
+## Getting Started
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Start the HTTP server to browse all projects:
+   ```bash
+   npm start
+   ```
+   This will start a server on http://localhost:8080 with a navigation page to all projects.
 
 
 ## Useful links

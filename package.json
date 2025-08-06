@@ -1,0 +1,19 @@
+{
+  "name": "frontend-playground",
+  "version": "1.0.0",
+  "description": "A monorepo containing various frontend playground projects",
+  "scripts": {
+    "start": "http-server . -p 8080 -o",
+    "start:cross-document": "http-server cross-document-messaging/src -p 8081",
+    "start:html-css": "cd html-css && npm start"
+  },
+  "workspaces": [
+    "cross-document-messaging",
+    "html-css"
+  ],
+  "author": "Michal Landsman",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

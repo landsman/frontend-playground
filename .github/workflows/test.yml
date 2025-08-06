@@ -8,8 +8,8 @@ on:
       - synchronize
       - ready_for_review
     paths:
-      - ".github/workflows/test-html-css.yml"
-      - "/html-css/**"
+      - ".github/workflows/test.yml"
+      - "./package.json"
       - "!**.md"
   workflow_dispatch:
 
@@ -22,6 +22,4 @@ jobs:
         with:
           node-version: 20
       - run: |
-          cd html-css
           npm install
-          npm run build

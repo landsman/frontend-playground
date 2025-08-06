@@ -91,12 +91,12 @@ body {
         background: linear-gradient(135deg, #4ecdc4, #44a08d);
         font-size: max(1.2rem, 1em + 2cqi);
     }
-    
+
     .card::before {
         content: "Medium container (≥ 500px)";
         background: #27ae60;
     }
-    
+
     .card h2 {
         font-size: 1.5rem;
     }
@@ -109,13 +109,13 @@ body {
         padding: 2.5rem;
         font-size: max(1.4rem, 1em + 3cqi);
     }
-    
+
     .card::before {
         content: "Large container (≥ 700px)";
         background: #8e44ad;
         color: white;
     }
-    
+
     .card h2 {
         font-size: 2rem;
         margin-bottom: 1rem;
@@ -130,13 +130,13 @@ body {
         font-size: max(1.6rem, 1em + 4cqi);
         border-radius: 16px;
     }
-    
+
     .card::before {
         content: "Extra Large container (≥ 900px)";
         background: #e74c3c;
         color: white;
     }
-    
+
     .card h2 {
         font-size: 2.5rem;
         margin-bottom: 1.5rem;

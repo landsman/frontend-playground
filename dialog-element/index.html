@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dialog example</title>
+  <link href="./index.css" rel="stylesheet"/>
+  <link href="./dialog.css" rel="stylesheet"/>
+  <script src="./index.js"></script>
+</head>
+<body onload="dialogManager();">
+<div id="content">
+  <dialog id="myDialog">
+    <form method="dialog">
+      <p>
+        Hey 👋<br/>
+        This is what a native dialog looks like!
+      </p>
+      <button>Close it - by form submit</button>
+    </form>
+    <button id="closeMyDialog">close it - by event listener</button>
+
+    <div id="comment">
+      <p>
+        <strong>What is working out of the box:</strong>
+      </p>
+      <ol>
+        <li>close by ESC on desktop keyboard</li>
+        <li>open by build-in JavaScript method
+          <pre>showModal()</pre>
+        </li>
+        <li>close by build-in JavaScript method
+          <pre>close()</pre>
+        </li>
+        <li>positioning to the center of the screen</li>
+        <li>CSS support for a background after active modal by
+          <pre>dialog::backdrop</pre>
+        </li>
+        <li>CSS support for styling active state by
+          <pre>dialog[open]</pre>
+        </li>
+      </ol>
+    </div>
+  </dialog>
+
+  <button id="showMyDialog">Open Dialog</button>
+</div>
+</body>
+</html>
