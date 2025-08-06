@@ -1,0 +1,121 @@
+@layer theme {
+  /* Base styles for all icons */
+  .icon {
+    /* regular size on desktop */
+    width: var(--icon-size-l);
+    height: var(--icon-size-l);
+
+    display: block;
+
+    /* default icon color - all icons should be in this color by default in SVG source code */
+    background-color: var(--icon-color);
+
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+
+    /* default hover effects for all icons */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+  }
+
+  .icon:hover {
+    background-color: var(--icon-color-hover);
+  }
+
+  /* smaller icon size for mobile devices */
+  @media (max-width: 768px) {
+    .icon {
+      width: var(--icon-size-xl);
+      height: var(--icon-size-xl);
+    }
+  }
+
+  .icon-gear {
+    mask-image: url("../img/gear.svg");
+  }
+
+  .icon-pencil {
+    mask-image: url("../img/pencil.svg");
+  }
+
+  .icon-search {
+    mask-image: url("../img/search.svg");
+  }
+
+  .icon-trash {
+    mask-image: url("../img/trash.svg");
+  }
+
+  .icon-folder {
+    mask-image: url("../img/folder.svg");
+  }
+
+  .icon-home {
+    mask-image: url("../img/home.svg");
+  }
+
+  .icon-user {
+    mask-image: url("../img/user.svg");
+  }
+
+  .icon-heart {
+    mask-image: url("../img/heart.svg");
+  }
+
+  .icon-star {
+    mask-image: url("../img/star.svg");
+  }
+
+  .icon-download {
+    mask-image: url("../img/download.svg");
+  }
+
+  .icon-upload {
+    mask-image: url("../img/upload.svg");
+  }
+
+  .icon-mail {
+    mask-image: url("../img/mail.svg");
+  }
+
+  .icon-phone {
+    mask-image: url("../img/phone.svg");
+  }
+
+  .icon-calendar {
+    mask-image: url("../img/calendar.svg");
+  }
+
+  .icon-lock {
+    mask-image: url("../img/lock.svg");
+  }
+
+  .icon-unlock {
+    mask-image: url("../img/unlock.svg");
+  }
+
+  .icon-arrow-left {
+    mask-image: url("../img/arrow-left.svg");
+  }
+
+  .icon-arrow-right {
+    mask-image: url("../img/arrow-right.svg");
+  }
+
+  .icon-plus {
+    mask-image: url("../img/plus.svg");
+  }
+
+  .icon-minus {
+    mask-image: url("../img/minus.svg");
+  }
+
+  .icon-check {
+    mask-image: url("../img/check.svg");
+  }
+
+  .icon-copy {
+    mask-image: url("../img/copy.svg");
+  }
+}
