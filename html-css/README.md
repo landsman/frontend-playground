@@ -1,6 +1,6 @@
-# Frontend Padawan
+# HTML & CSS
 
-All you need today is plain CSS and Typescript and patience.
+All you need today is plain CSS and TypeScript and patience.
 
 ![Patience](https://media1.giphy.com/media/26DN48mfu3uWJ3J7y/giphy.gif)
 
@@ -8,5 +8,5 @@ All you need today is plain CSS and Typescript and patience.
 
 ```bash
 npm install
-npm run dev
+npm run start
 ```
