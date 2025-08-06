@@ -394,7 +394,7 @@ button:active,
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: rgba(255, 255, 255, 0.9);
     background: #000000;
     --color-dark-side: #dc2626;
     --color-republic: #1d4ed8;
