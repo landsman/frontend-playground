@@ -22,14 +22,13 @@ This example shows a simple use-case:
 cross-document-messaging/
 ├── README.md                   # Project documentation
 ├── package.json                # Project metadata
-└── src/
-    ├── index.html              # 🏠 Main parent window (entry point)
-    ├── parent.js               # 📤 Parent window messaging logic
-    ├── parent.css              # 🎨 Parent window styles
-    └── iframe/
-        ├── iframe.html         # 🖼️  Embedded iframe content
-        ├── iframe.js           # 📥 Iframe messaging logic
-        └── iframe.css          # 🎨 Iframe content styles
+├── index.html                  # 🏠 Main parent window (entry point)
+├── parent.js                   # 📤 Parent window messaging logic
+├── parent.css                  # 🎨 Parent window styles
+└── iframe/
+    ├── iframe.html             # 🖼️  Embedded iframe content
+    ├── iframe.js               # 📥 Iframe messaging logic
+    └── iframe.css              # 🎨 Iframe content styles
 ```
 
 ## How It Works
@@ -50,7 +49,7 @@ cross-document-messaging/
    npm start
    ```
 
-2. **Open in your browser**: Navigate to `http://localhost:8080/cross-document-messaging/src/`
+2. **Open in your browser**: Navigate to `http://localhost:8080/cross-document-messaging/`
 
 3. **View the demo**: The iframe will automatically send its dimensions to the parent window.
 
