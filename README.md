@@ -16,21 +16,6 @@ It is also a good place where I can redirect someone who is going to start with 
    ```
    This will start a server on http://localhost:8080 with a navigation page to all projects.
 
-## Available Scripts
-
-- `npm start` - Start HTTP server on port 8080 with project navigation
-- `npm run start:cross-document` - Start cross-document-messaging project on port 8081
-- `npm run start:html-css` - Start html-css project with Vite dev server
-- `npm run install:all` - Install dependencies for all projects
-
-## Projects
-
-- **cross-document-messaging** - Demo showing iframe-parent communication using postMessage API
-- **css-container-queries** - Demonstration of CSS container queries functionality
-- **html-css** - HTML and CSS examples with Vite and TypeScript
-- **dialog-element** - Examples using the HTML dialog element
-- **popover** - Popover API demonstrations
-
 
 ## Useful links
 
