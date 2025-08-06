@@ -48,4 +48,84 @@
     mask-image: url("/img/folder.svg");
     background-color: var(--color-icon-subtle);
   }
+
+  .home {
+    composes: common;
+    mask-image: url("/img/home.svg");
+  }
+
+  .user {
+    composes: common;
+    mask-image: url("/img/user.svg");
+  }
+
+  .heart {
+    composes: common;
+    mask-image: url("/img/heart.svg");
+  }
+
+  .star {
+    composes: common;
+    mask-image: url("/img/star.svg");
+  }
+
+  .download {
+    composes: common;
+    mask-image: url("/img/download.svg");
+  }
+
+  .upload {
+    composes: common;
+    mask-image: url("/img/upload.svg");
+  }
+
+  .mail {
+    composes: common;
+    mask-image: url("/img/mail.svg");
+  }
+
+  .phone {
+    composes: common;
+    mask-image: url("/img/phone.svg");
+  }
+
+  .calendar {
+    composes: common;
+    mask-image: url("/img/calendar.svg");
+  }
+
+  .lock {
+    composes: common;
+    mask-image: url("/img/lock.svg");
+  }
+
+  .unlock {
+    composes: common;
+    mask-image: url("/img/unlock.svg");
+  }
+
+  .arrow-left {
+    composes: common;
+    mask-image: url("/img/arrow-left.svg");
+  }
+
+  .arrow-right {
+    composes: common;
+    mask-image: url("/img/arrow-right.svg");
+  }
+
+  .plus {
+    composes: common;
+    mask-image: url("/img/plus.svg");
+  }
+
+  .minus {
+    composes: common;
+    mask-image: url("/img/minus.svg");
+  }
+
+  .check {
+    composes: common;
+    mask-image: url("/img/check.svg");
+  }
 }
